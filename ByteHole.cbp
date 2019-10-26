@@ -15,6 +15,7 @@
 				<Compiler>
 					<Add option="-g" />
 					<Add directory="$(#wx)/lib/gcc_dll_debug_x64/mswu" />
+					<Add directory="include" />
 				</Compiler>
 				<ResourceCompiler>
 					<Add directory="$(#wx)/lib/gcc_dll_debug_x64/mswu" />
@@ -47,6 +48,7 @@
 				<Compiler>
 					<Add option="-O2" />
 					<Add directory="$(#wx)/lib/gcc_dll_release_x64/mswu" />
+					<Add directory="include" />
 				</Compiler>
 				<ResourceCompiler>
 					<Add directory="$(#wx)/lib/gcc_dll_release_x64/mswu" />
@@ -93,13 +95,15 @@
 			<Add option="-m64" />
 			<Add option="-mthreads" />
 		</Linker>
-		<Unit filename="ByteHoleApp.cpp" />
-		<Unit filename="ByteHoleApp.h" />
-		<Unit filename="ByteHoleMain.cpp" />
-		<Unit filename="ByteHoleMain.h" />
+		<Unit filename="include/ByteHoleApp.h" />
+		<Unit filename="include/ByteHoleMain.h" />
+		<Unit filename="include/VisualObject.h" />
 		<Unit filename="resource.rc">
 			<Option compilerVar="WINDRES" />
 		</Unit>
+		<Unit filename="src/ByteHoleApp.cpp" />
+		<Unit filename="src/ByteHoleMain.cpp" />
+		<Unit filename="src/VisualObject.cpp" />
 		<Unit filename="wxsmith/ByteHoleframe.wxs" />
 		<Extensions>
 			<code_completion />
