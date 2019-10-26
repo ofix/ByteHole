@@ -97,13 +97,13 @@
 		</Linker>
 		<Unit filename="include/ByteHoleApp.h" />
 		<Unit filename="include/ByteHoleMain.h" />
-		<Unit filename="include/VisualObject.h" />
+		<Unit filename="include/Element.h" />
 		<Unit filename="resource.rc">
 			<Option compilerVar="WINDRES" />
 		</Unit>
 		<Unit filename="src/ByteHoleApp.cpp" />
 		<Unit filename="src/ByteHoleMain.cpp" />
-		<Unit filename="src/VisualObject.cpp" />
+		<Unit filename="src/Element.cpp" />
 		<Unit filename="wxsmith/ByteHoleframe.wxs" />
 		<Extensions>
 			<code_completion />

@@ -1,6 +1,6 @@
-#include "VisualObject.h"
+#include "Element.h"
 
-VisualObject::VisualObject(wxString type,
+Element::Element(wxString type,
                            int x,
                            int y,
                            int w,
@@ -22,113 +22,113 @@ VisualObject::VisualObject(wxString type,
 
 }
 
-VisualObject::~VisualObject()
+Element::~Element()
 {
 
 }
 
-int VisualObject::GetX()
+int Element::GetX()
 {
     return m_x;
 }
-void VisualObject::SetX(int x)
+void Element::SetX(int x)
 {
     m_x =x ;
 }
-int VisualObject::GetY()
+int Element::GetY()
 {
     return m_y;
 }
-void VisualObject::SetY(int y)
+void Element::SetY(int y)
 {
     m_y = y;
 }
-int VisualObject::GetWidth()
+int Element::GetWidth()
 {
     return m_w;
 }
-void VisualObject::SetWidth(int width)
+void Element::SetWidth(int width)
 {
     m_w = width;
 }
-int VisualObject::GetHeight()
+int Element::GetHeight()
 {
     return m_h;
 }
-void VisualObject::SetHeight(int height)
+void Element::SetHeight(int height)
 {
      m_h = height;
 }
-VisualObject* VisualObject::GetParent()
+Element* Element::GetParent()
 {
     return m_pParent;
 }
-bool VisualObject::IsInGroup()
+bool Element::IsInGroup()
 {
     return m_bInGroup;
 }
-wxString VisualObject::GetType()
+wxString Element::GetType()
 {
     return wxT("");
 }
-bool VisualObject::CompareTo(VisualObject* pObject)
+bool Element::CompareTo(Element* pObject)
 {
     return false;
 }
-VisualObject* VisualObject::Clone()
+Element* Element::Clone()
 {
     return nullptr;
 }
 
-void VisualObject::Rotate(double angle)
+void Element::Rotate(double angle)
 {
 
 }
-void VisualObject::RotateTo(double angle)
+void Element::RotateTo(double angle)
 {
 
 }
-void VisualObject::RotateLeft(double angle)
+void Element::RotateLeft(double angle)
 {
 
 }
-void VisualObject::RotateRight(double angle)
+void Element::RotateRight(double angle)
 {
 
 }
-void VisualObject::Move(int xOffset, int yOffset)
+void Element::Move(int xOffset, int yOffset)
 {
 
 }
-void VisualObject::MoveTo(int xPos, int yPos)
+void Element::MoveTo(int xPos, int yPos)
 {
 
 }
-void VisualObject::ZoomIn(double scale_ratio)
+void Element::ZoomIn(double scale_ratio)
 {
 
 }
-void VisualObject::ZoomOut(double scale_ratio)
+void Element::ZoomOut(double scale_ratio)
 {
 
 }
 
-wxString VisualObject::Serialize()
+wxString Element::Serialize()
 {
     return wxT("");
 }
 
-VisualObject* VisualObject::UnSerialize()
+Element* Element::UnSerialize()
 {
     return nullptr;
 }
 
-bool VisualObject::IsSelected()
+bool Element::IsSelected()
 {
     return m_bSelected;
 }
 
-bool VisualObject::HitTest(wxPoint pt)
+bool Element::HitTest(wxPoint pt)
 {
     return false;
 }
