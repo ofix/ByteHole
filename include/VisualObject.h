@@ -2,6 +2,8 @@
 #define VISUALOBJECT_H
 
 #include <wx/string.h>
+#include <wx/gdicmn.h>
+
 
 class VisualObject
 {
@@ -34,6 +36,8 @@ class VisualObject
         wxString Serialize();
         VisualObject* UnSerialize();
 
+        bool IsSelected();
+        bool HitTest(wxPoint pt);
 
     protected:
         wxString m_type;
@@ -44,8 +48,9 @@ class VisualObject
         double m_scaleRatio;
         double m_rotateAngle;
         bool m_bRotate;
-        bool m_bIsGroup;
+        bool m_bInGroup;
         VisualObject* m_pParent;
+        bool m_bSelected;
 };
 
 #endif // VISUALOBJECT_H

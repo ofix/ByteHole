@@ -15,8 +15,9 @@ VisualObject::VisualObject(wxString type,
                            m_scaleRatio(scale_ratio),
                            m_rotateAngle(rotate_angle),
                            m_bRotate(false),
-                           m_bIsGroup(false),
-                           m_pParent(nullptr)
+                           m_bInGroup(false),
+                           m_pParent(nullptr),
+                           m_bSelected(true)
 {
 
 }
@@ -60,11 +61,11 @@ void VisualObject::SetHeight(int height)
 }
 VisualObject* VisualObject::GetParent()
 {
-    return nullptr;
+    return m_pParent;
 }
 bool VisualObject::IsInGroup()
 {
-    return false;
+    return m_bInGroup;
 }
 wxString VisualObject::GetType()
 {
@@ -120,4 +121,14 @@ wxString VisualObject::Serialize()
 VisualObject* VisualObject::UnSerialize()
 {
     return nullptr;
+}
+
+bool VisualObject::IsSelected()
+{
+    return m_bSelected;
+}
+
+bool VisualObject::HitTest(wxPoint pt)
+{
+    return false;
 }
