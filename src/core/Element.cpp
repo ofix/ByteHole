@@ -1,4 +1,4 @@
-#include "Element.h"
+#include "core/Element.h"
 
 Element::Element(wxString type,
                            int x,
@@ -98,11 +98,13 @@ void Element::RotateRight(double angle)
 }
 void Element::Move(int xOffset, int yOffset)
 {
-
+    m_x += xOffset;
+    m_y += yOffset;
 }
 void Element::MoveTo(int xPos, int yPos)
 {
-
+    m_x = xPos;
+    m_y = yPos;
 }
 void Element::ZoomIn(double scale_ratio)
 {

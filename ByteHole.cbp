@@ -95,12 +95,15 @@
 			<Add option="-m64" />
 			<Add option="-mthreads" />
 		</Linker>
+		<Unit filename="include/BlockElement.h" />
 		<Unit filename="include/ByteHoleApp.h" />
 		<Unit filename="include/ByteHoleMain.h" />
 		<Unit filename="include/Element.h" />
+		<Unit filename="include/enum.h" />
 		<Unit filename="resource.rc">
 			<Option compilerVar="WINDRES" />
 		</Unit>
+		<Unit filename="src/BlockElement.cpp" />
 		<Unit filename="src/ByteHoleApp.cpp" />
 		<Unit filename="src/ByteHoleMain.cpp" />
 		<Unit filename="src/Element.cpp" />
