@@ -10,13 +10,13 @@ class InlineElement:public Element
         virtual ~InlineElement();
         void SetPadding(int padding);
         void SetPaddingLeft(int padding_left);
-        void SetPaddingRight(int padding_right);
         void SetPaddingTop(int padding_top);
+        void SetPaddingRight(int padding_right);
         void SetPaddingBottom(int padding_bottom);
         int* GetPadding();
         int GetPaddingLeft();
-        int GetPaddingRight();
         int GetPaddingTop();
+        int GetPaddingRight();
         int GetPaddingBottom();
     protected:
         int m_padding[4];
