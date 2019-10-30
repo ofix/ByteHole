@@ -16,6 +16,7 @@
 					<Add option="-g" />
 					<Add directory="$(#wx)/lib/gcc_dll_debug_x64/mswu" />
 					<Add directory="include" />
+					<Add directory="include/ui" />
 				</Compiler>
 				<ResourceCompiler>
 					<Add directory="$(#wx)/lib/gcc_dll_debug_x64/mswu" />
@@ -49,6 +50,7 @@
 					<Add option="-O2" />
 					<Add directory="$(#wx)/lib/gcc_dll_release_x64/mswu" />
 					<Add directory="include" />
+					<Add directory="include/ui" />
 				</Compiler>
 				<ResourceCompiler>
 					<Add directory="$(#wx)/lib/gcc_dll_release_x64/mswu" />
@@ -95,20 +97,23 @@
 			<Add option="-m64" />
 			<Add option="-mthreads" />
 		</Linker>
-		<Unit filename="include/ByteHoleApp.h" />
-		<Unit filename="include/ByteHoleMain.h" />
+		<Unit filename="ByteHole.cbp" />
+		<Unit filename="ByteHoleApp.cpp" />
+		<Unit filename="ByteHoleApp.h" />
+		<Unit filename="ByteHoleMain.cpp" />
+		<Unit filename="ByteHoleMain.h" />
 		<Unit filename="include/core/BlockElement.h" />
 		<Unit filename="include/core/Element.h" />
 		<Unit filename="include/core/InlineElement.h" />
 		<Unit filename="include/core/enum.h" />
+		<Unit filename="include/ui/DivBoxCtrl.h" />
 		<Unit filename="resource.rc">
 			<Option compilerVar="WINDRES" />
 		</Unit>
-		<Unit filename="src/ByteHoleApp.cpp" />
-		<Unit filename="src/ByteHoleMain.cpp" />
 		<Unit filename="src/core/BlockElement.cpp" />
 		<Unit filename="src/core/Element.cpp" />
 		<Unit filename="src/core/InlineElement.cpp" />
+		<Unit filename="src/ui/DivBoxCtrl.cpp" />
 		<Unit filename="wxsmith/ByteHoleframe.wxs" />
 		<Extensions>
 			<code_completion />
@@ -117,7 +122,7 @@
 			<wxsmith version="1">
 				<gui name="wxWidgets" src="ByteHoleApp.cpp" main="ByteHoleFrame" init_handlers="necessary" language="CPP" />
 				<resources>
-					<wxFrame wxs="wxsmith/ByteHoleframe.wxs" src="ByteHoleMain.cpp" hdr="ByteHoleMain.h" fwddecl="0" i18n="1" name="ByteHoleFrame" language="CPP" />
+					<wxFrame wxs="wxsmith/ByteHoleframe.wxs" src="ByteHoleMain.cpp" hdr="ByteHoleMain.h" fwddecl="0" i18n="0" name="ByteHoleFrame" language="CPP" />
 				</resources>
 			</wxsmith>
 		</Extensions>
